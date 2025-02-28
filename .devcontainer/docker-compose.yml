@@ -1,0 +1,9 @@
+---
+services:
+  c_dev:
+    image: mcr.microsoft.com/devcontainers/cpp:bookworm
+    container_name: c_dev
+    volumes:
+      - ..:/workspace
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: "tail -f /dev/null"  # Keeps the container running for dev
